@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Libre+Bodoni:ital,wght@0,400..700;1,400..700&display=swap');
 @import 'tailwindcss';
 
 :root {
@@ -10,4 +11,10 @@
   --color-lightPink: var(--lightPink);
   --color-darkText: var(--darkText);
   --color-accentBrwn: var(--accentBrwn);
+  --font-dmSans: 'DM Sans', sans-serif;
+  --font-bodoni: 'Libre Bodoni', sans-serif;
+}
+
+.op {
+  background-color: rgba(0, 0, 0, 0.336);
 }

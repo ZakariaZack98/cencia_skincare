@@ -1,10 +1,12 @@
 import React from 'react'
+import VideoBackground from '../../assets/Components/VideoBG'
 
 const Home = () => {
   return (
-    <div className='dark:bg-gray-900 dark:text-accentBrwn min-h-screen'>
-      This is home
-    </div>
+    <>
+      <VideoBackground/>
+    </>
+    
   )
 }
 

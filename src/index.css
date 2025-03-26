@@ -1,0 +1,13 @@
+@import 'tailwindcss';
+
+:root {
+  --lightPink : #F4F0E9;
+  --darkText: #352711;
+  --accentBrwn: #E69149;
+}
+
+@theme {
+  --color-lightPink: var(--lightPink);
+  --color-darkText: var(--darkText);
+  --color-accentBrwn: var(--accentBrwn);
+}

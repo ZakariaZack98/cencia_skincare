@@ -1,7 +1,38 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Navbar from "./HomeComponents/Navbar";
 
 const VideoBackground = () => {
+  const [scrollY, setScrollY] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrollY(window.scrollY);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+  // Calculate styles based on scroll position
+  const heroTextStyle = {
+    transform: `translateY(${Math.min(scrollY * -0.5, -200)}px) scale(${Math.max(1 + scrollY / 1000)})`,
+    opacity: `${Math.max(1 - scrollY / 500, 0)}`,
+    transition: "transform 0.1s ease-out, opacity 0.1s ease-out",
+  };
+
+  const videoStyle = {
+    objectFit: "cover",
+    width: "100%",
+    height: "100%",
+    position: "absolute",
+    top: "50%",
+    left: "50%",
+    transform: `translate(-50%, -50%) scale(${1 + scrollY / 1000})`, // Slight zoom-in effect
+    transition: "transform 0.1s ease-out",
+  };
+
   return (
     <div
       style={{
@@ -18,28 +49,30 @@ const VideoBackground = () => {
         muted
         loop
         playsInline
-        style={{
-          objectFit: "cover",
-          width: "100%",
-          height: "100%",
-          position: "absolute",
-          top: "50%",
-          left: "50%",
-          transform: "translate(-50%, -50%)",
-        }}>
+        style={videoStyle}>
         <source src="/Videos/hero.mp4" type="video/mp4" />
         {/* <source src="/background-video.webm" type="video/webm" /> */}
       </video>
       <div className="relative">
         <Navbar />
       </div>
-      <div className="mx-auto mt-60 absolute bottom-0 ms-[5dvw]">
-          <div className="heroText font-dmSans drop-shadow-lg border-[20px] border-accentBrwn mx-auto">
-            <h1 className="text-[100px] text-white font-black leading-15">Glamour</h1>
-            <h1 className="text-[120px] text-lightPink font-black leading-25 translate-x-25">Skincare</h1>
-            <h1 className="text-[150px] text-accentBrwn font-black leading-35 translate-x-50">REDEFINED.</h1>
-          </div>
+      <div
+        className="heroText mx-auto mt-60 absolute bottom-0 ms-[5dvw] translate-y-20"
+        style={heroTextStyle}>
+        <div className="heroText font-dmSans drop-shadow-lg border-[20px] border-accentBrwn mx-auto">
+          <h1
+            className="text-[100px] text-white font-black leading-15"
+            data-aos="fade-right">
+            Glamour
+          </h1>
+          <h1 className="text-[120px] text-lightPink font-black leading-25 translate-x-25">
+            Skincare
+          </h1>
+          <h1 className="text-[150px] text-accentBrwn font-black leading-35 translate-x-50">
+            REDEFINED.
+          </h1>
         </div>
+      </div>
     </div>
   );
 };

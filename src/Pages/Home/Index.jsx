@@ -1,12 +1,15 @@
 import React from "react";
 import VideoBackground from "../../assets/Components/VideoBG";
-import { getFeatureData, getShowCaseData } from "../../lib/fetch";
+import { getFeatureData, getInstructionSliderData, getShowCaseData } from "../../lib/fetch";
 import SingleFeature from "../../assets/Components/CommonComponents/SingleFeature";
 import RotatingShowcase from "../../assets/Components/CommonComponents/RotatingShowcase";
+import InstructionSlider from "../../assets/Components/HomeComponents/InstructionSlider";
+
 
 const Home = () => {
   const featureData = getFeatureData();
   const showCaseData = getShowCaseData();
+  const instructionSliderData = getInstructionSliderData();
   return (
     <>
       <VideoBackground />
@@ -36,13 +39,21 @@ const Home = () => {
       <SingleFeature />
       {/* border-solid border-2 border-red-500 */}
       {/* ================================= */}
-      <div className="bg-lightPink dark:bg-gray-800 py-25">
+      {/* ============================Steps Slider Part================================ */}
+      <section className="bg-white pb-1">
+        <InstructionSlider data={instructionSliderData}/>
+      </section>
+      <div className="bg-white h-[50px] "></div>
+      {/* ============================Steps slider Part================================ */}
+      {/* ============================Rotate Showcase Part================================ */}
+      <div className="bg-lightPink dark:bg-gray-800 py-25 relative">
+        <h1 className="absolute text-[180px] font-dmSans font-black text-white dark:text-gray-500 right-0 top-11 tracking-wider" data-aos="zoom-in" data-aos-duration="800">BODY MISTS</h1>
         <div className="container mx-auto">
           <div className="flex h-full justify-center items-center gap-x-10">
             {
               showCaseData?.map((item, idx) => {
                 return (
-                  <div className={`${!idx % 2 === 0 ? 'mt-70': ''}`}>
+                  <div key={item.id} className={`${!idx % 2 === 0 ? 'mt-70': ''}`}>
                     <RotatingShowcase imgUrl={item.imgUrl} textContent={item.textContent}/>
                   </div>
                 )
@@ -51,6 +62,8 @@ const Home = () => {
           </div>
         </div>
       </div>
+      {/* ============================Rotate Showcase Part================================ */}
+      
     </>
   );
 };

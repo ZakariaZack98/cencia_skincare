@@ -57,7 +57,7 @@ const VideoBackground = () => {
         <Navbar />
       </div>
       <div
-        className="heroText mx-auto mt-60 absolute bottom-0 ms-[5dvw] translate-y-20" 
+        className="heroText translate-x-65 mb-10 mt-60 absolute bottom-0 ms-[5dvw] translate-y-20 " 
         style={heroTextStyle} >
         <div className="heroText font-dmSans drop-shadow-lg border-[20px] border-accentBrwn mx-auto" data-aos='zoom-out' data-aos-duration="1000" data-aos-delay="1000">
           <h1

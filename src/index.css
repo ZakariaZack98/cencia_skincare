@@ -7,14 +7,27 @@
   --accentBrwn: #E69149;
 }
 
+@font-face {
+  font-family: 'Agraham'; /* Give your font a name */
+  src: url('/public/Agraham.otf') format('opentype'); /* Path to the OTF file */
+  font-weight: normal; /* Adjust if needed (e.g., 400, 700) */
+  font-style: normal; /* Optional: italic, oblique */
+}
+
 @theme {
   --color-lightPink: var(--lightPink);
   --color-darkText: var(--darkText);
   --color-accentBrwn: var(--accentBrwn);
   --font-dmSans: 'DM Sans', sans-serif;
   --font-bodoni: 'Libre Bodoni', sans-serif;
+  --font-agraham: 'Agraham', sans-serif;
 }
 
 .op {
   background-color: rgba(0, 0, 0, 0.336);
 }
+
+.rotate:hover .pr {
+  transform: rotate(12deg) scale(1.25) translateY(-80px);
+}
+

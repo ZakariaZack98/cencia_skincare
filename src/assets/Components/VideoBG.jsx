@@ -29,7 +29,7 @@ const VideoBackground = () => {
     position: "absolute",
     top: "50%",
     left: "50%",
-    transform: `translate(-50%, -50%) scale(${1 + scrollY / 1000})`, // Slight zoom-in effect
+    transform: `translate(-50%, -50%) scale(${1 + scrollY / 1000})`,
     transition: "transform 0.1s ease-out",
   };
 
@@ -53,16 +53,15 @@ const VideoBackground = () => {
         <source src="/Videos/hero.mp4" type="video/mp4" />
         {/* <source src="/background-video.webm" type="video/webm" /> */}
       </video>
-      <div className="relative">
+      <div className="relative" >
         <Navbar />
       </div>
       <div
-        className="heroText mx-auto mt-60 absolute bottom-0 ms-[5dvw] translate-y-20"
-        style={heroTextStyle}>
-        <div className="heroText font-dmSans drop-shadow-lg border-[20px] border-accentBrwn mx-auto">
+        className="heroText mx-auto mt-60 absolute bottom-0 ms-[5dvw] translate-y-20" 
+        style={heroTextStyle} >
+        <div className="heroText font-dmSans drop-shadow-lg border-[20px] border-accentBrwn mx-auto" data-aos='zoom-out' data-aos-duration="1000" data-aos-delay="1000">
           <h1
-            className="text-[100px] text-white font-black leading-15"
-            data-aos="fade-right">
+            className="text-[100px] text-white font-black leading-15">
             Glamour
           </h1>
           <h1 className="text-[120px] text-lightPink font-black leading-25 translate-x-25">

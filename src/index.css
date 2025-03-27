@@ -9,7 +9,7 @@
 
 @font-face {
   font-family: 'Agraham'; /* Give your font a name */
-  src: url('/public/Agraham.otf') format('opentype'); /* Path to the OTF file */
+  src: url('/Agraham.otf') format('opentype'); /* Path to the OTF file */
   font-weight: normal; /* Adjust if needed (e.g., 400, 700) */
   font-style: normal; /* Optional: italic, oblique */
 }
@@ -31,16 +31,7 @@
   transform: rotate(12deg) scale(1.25) translateY(-80px);
 }
 
-/* Ensure higher specificity for the slider buttons */
-.slick-slider .slick-prev, .slick-slider .slick-next {
-  font-size: 36px; /* Increase button size */
-  color: #2d2d2d !important; /* Default gray-800 color */
-  z-index: 2; /* Ensure buttons are above other elements */
-}
 
-.slick-slider .slick-prev:hover, .slick-slider .slick-next:hover {
-  color: var(--accentBrwn) !important; /* Change to accentBrwn on hover */
-}
 
 /* Ensure higher specificity for the dots */
 .slick-slider .slick-dots li button:before {
@@ -51,3 +42,4 @@
 .slick-slider .slick-dots li.slick-active button:before {
   color: var(--accentBrwn) !important; /* Change to accentBrwn when active */
 }
+

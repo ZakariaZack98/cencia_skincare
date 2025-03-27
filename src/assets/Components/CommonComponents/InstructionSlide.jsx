@@ -4,7 +4,7 @@ import Button from "./Button";
 const InstructionSlide = ({imgUrl, title, textContent}) => {
   return (
     <div className="w-full flex items-center  bg-white dark:bg-accentBrwn p-10 text-accentBrwn">
-      <picture className="w-[40%]">
+      <picture className="w-[40%] translate-x-15">
         <img
           src={imgUrl}
           alt=""

@@ -27,12 +27,12 @@ export const getShowCaseData = () => {
   return [
     {
       id: 1,
-      imgUrl: '/public/pr1.png',
-      textContent: 'Wanna Smell Like Rapberries?'
+      imgUrl: '/pr1.png',
+      textContent: 'Wanna Smell Like Raspberries?'
     },
     {
       id: 2,
-      imgUrl: '/public/pr4.png',
+      imgUrl: '/pr4.png',
       textContent: 'Smells Like Christmas in a Bottle'
     },
   ]
@@ -77,4 +77,61 @@ export const getInstructionSliderData = () => {
       textContent: `Consectetur eu consequat ad ullamco anim qui fugiat dolor elit excepteur sit Lorem. Nisi qui pariatur non Lorem adipisicing ad dolore exercitation magna sit dolore fugiat adipisicing.`
     },
   ]
+}
+
+
+
+export const getProductData = () => {
+
+  const handleBuy = (id) => {
+    console.log(id, 'awaiting payment')
+  }
+  const rawProductsData = [
+    {
+      pid: 10021,
+      imgUrl: 'https://uploads.livepure.com/page/15/feaca5a4ce60c0510ae9c78dafaf1e8d.png',
+      name: 'Pure Foam Cleanser',
+      retailPrice: 17.99,
+      preferredPrice: 14.99,
+    },
+    {
+      pid: 10022,
+      imgUrl: 'https://uploads.livepure.com/page/15/75d8056eca977ac909357e78db91453c.png',
+      name: 'PURE Toaner',
+      retailPrice: 15.99,
+      preferredPrice: 12.99,
+    },
+    {
+      pid: 10023,
+      imgUrl: 'https://uploads.livepure.com/page/15/3720c0c045b1026e3102d06fa0c3f384.png',
+      name: 'PURE Mask',
+      retailPrice: 45.99,
+      preferredPrice: 34.99,
+    },
+    {
+      pid: 10024,
+      imgUrl: 'https://stg-uploads.puremeka.com/page/15/41ddbf694f769e470ade868a244df6a6.png?v=1697428408',
+      name: 'PURE Imulsion',
+      retailPrice: 38.99,
+      preferredPrice: 32.99,
+    },
+    {
+      pid: 10025,
+      imgUrl: 'https://uploads.livepure.com/page/659/f9d68b740ab34b4021022805929413ea.png?v=2023103004',
+      name: 'PURE Cream',
+      retailPrice: 87.99,
+      preferredPrice: 70.00,
+    },
+    {
+      pid: 10026,
+      imgUrl: 'https://uploads.livepure.com/page/659/ddd3c55fb6a8fafb95b200376d8eb570.png?v=2023103004',
+      name: 'PURE Body Mist',
+      retailPrice: 10.99,
+      preferredPrice: 8.99,
+    },
+  ]
+
+  return rawProductsData.map(item => ({...item, buyHandler: () => handleBuy(item.pid), cartHandler: () => handleCart(item.pid)})
+  )
+
 }

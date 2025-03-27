@@ -4,7 +4,7 @@ import RotatingShowcase from '../CommonComponents/RotatingShowcase'
 const BodyMists = ({data}) => {
   return (
     <div className="bg-lightPink dark:bg-gray-800 py-25 relative">
-        <h1 className="absolute text-[180px] font-dmSans font-black text-white dark:text-gray-500 right-0 top-11 tracking-wider" data-aos="zoom-in" data-aos-duration="800">BODY MISTS</h1>
+        <h1 className="absolute text-[180px] font-dmSans font-black text-white dark:text-gray-700 right-0 top-11 tracking-wider" data-aos="zoom-in" data-aos-duration="800">BODY MISTS</h1>
         <div className="container mx-auto">
           <div className="flex h-full justify-center items-center gap-x-10">
             {

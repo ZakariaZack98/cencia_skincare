@@ -1,3 +1,5 @@
+import { useNavigate } from "react-router-dom"
+
 export const getFeatureData = () => {
   return [
     {
@@ -19,6 +21,30 @@ export const getFeatureData = () => {
       id: 4,
       title: 'Clinically Tested',
       content: 'Sint quis laborum eu voluptate aliquip commodo laboris Lorem dolore irure magna.'
+    },
+  ]
+}
+
+export const getSingleFeatureData = () => {
+  const navigate = useNavigate();
+  return [
+    {
+      id: 1,
+      imgUrl: 'https://uploads.livepure.com/page/15/1651a07ae69586f9151cdf3e5c940fb1.png',
+      title: `Formulated By K-Beauty Experts`,
+      content: 'Reprehenderit Lorem reprehenderit aliqua incididunt amet laboris Lorem ad adipisicing culpa ipsum est culpa.',
+      clickHandler: () => {
+        navigate('/shop')
+      }
+    },
+    {
+      id: 2,
+      imgUrl: 'https://uploads.livepure.com/page/15/76da84bfdb18a497a468fac20c17d66d.png',
+      title: `No Chemical & Cruelty Free`,
+      content: 'Reprehenderit Lorem reprehenderit aliqua incididunt amet laboris Lorem ad adipisicing culpa ipsum est culpa.',
+      clickHandler: () => {
+        navigate('/shop')
+      }
     },
   ]
 }

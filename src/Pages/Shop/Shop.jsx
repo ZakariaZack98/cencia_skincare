@@ -1,11 +1,11 @@
 import React from "react";
-import { getInstructionSliderData, getProductData } from "../../lib/fetch";
+import { getProductData } from "../../lib/fetch";
 import InstructionSlider from "../../assets/Components/HomeComponents/InstructionSlider";
 import ProductCard from "../../assets/Components/CommonComponents/ProductCard";
 
 const Shop = () => {
   const productData = getProductData();
-  const instructionSliderData = getInstructionSliderData();
+  const instructionSliderData = productData.map(item => item.sliderData);
   return (
     <>
       <div className="productGrid bg-lightPink dark:bg-gray-800 py-50">

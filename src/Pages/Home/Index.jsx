@@ -1,6 +1,6 @@
 import React from "react";
 import VideoBackground from "../../assets/Components/VideoBG";
-import { getFeatureData, getInstructionSliderData, getProductData, getShowCaseData, getSingleFeatureData } from "../../lib/fetch";
+import { getFeatureData, getProductData, getShowCaseData, getSingleFeatureData } from "../../lib/fetch";
 import SingleFeature from "../../assets/Components/CommonComponents/SingleFeature";
 import InstructionSlider from "../../assets/Components/HomeComponents/InstructionSlider";
 import FeatureSection from "../../assets/Components/HomeComponents/FeatureSection";
@@ -14,8 +14,8 @@ const Home = () => {
   const featureData = getFeatureData();
   const singleFeatureData = getSingleFeatureData();
   const showCaseData = getShowCaseData();
-  const instructionSliderData = getInstructionSliderData();
   const productData = getProductData();
+  const instructionSliderData = productData.map(item => item.sliderData);
   return (
     <>
       <VideoBackground />

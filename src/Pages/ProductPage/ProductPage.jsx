@@ -9,7 +9,7 @@ const ProductPage = () => {
   const matchedProduct = productData.find(item => item.pageLink === path)
   return (
     <>
-      <h1>{matchedProduct.name}</h1>
+      
     </>
   )
 }

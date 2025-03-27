@@ -116,7 +116,7 @@ export const getProductData = () => {
     {
       pid: 10021,
       imgUrl: 'https://uploads.livepure.com/page/15/feaca5a4ce60c0510ae9c78dafaf1e8d.png',
-      name: 'Pure Foam Cleanser',
+      name: 'PURE Foam Cleanser',
       retailPrice: 17.99,
       preferredPrice: 14.99,
     },

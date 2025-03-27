@@ -7,6 +7,7 @@ import FeatureSection from "../../assets/Components/HomeComponents/FeatureSectio
 import BodyMists from "../../assets/Components/HomeComponents/BodyMists";
 import ProductSlider from "../../assets/Components/HomeComponents/ProductSlider";
 import NewsLetter from "../../assets/Components/HomeComponents/NewsLetter";
+import Footer from "../../assets/Components/HomeComponents/Footer";
 
 
 const Home = () => {
@@ -30,6 +31,7 @@ const Home = () => {
       <ProductSlider data={productData}/>
       <SingleFeature data={singleFeatureData[1]}/>
       <NewsLetter/>
+      <Footer/>
     </>
   );
 };

@@ -2,9 +2,9 @@ import React from "react";
 import { FaInstagram, FaTiktok} from "react-icons/fa";
 import { FaSquareFacebook, FaXTwitter } from "react-icons/fa6";
 
-const Navbar = () => {
+const Navbar = ({exception}) => {
   return (
-    <div className="h-15 backdrop-blur-xl shadow-md text-lightPink" style={{backgroundColor: "rgba(0, 0, 0, 0.136)"}}>
+    <div className={`h-15 backdrop-blur-xl ${exception ? 'bg-accentBrwn' : ''} shadow-md text-lightPink`} style={exception ? {} :{backgroundColor: "rgba(0, 0, 0, 0.136)"}}>
       <div className="container mx-auto h-full">
         <div className="flex justify-between items-center h-full">
           <h3 className="font-bodoni text-3xl font-bold drop-shadow-md">C'ENCIA</h3>

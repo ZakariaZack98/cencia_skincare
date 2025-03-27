@@ -6,6 +6,7 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import RootLayout from './assets/Components/RootLayout/RootLayout';
 import Shop from './Pages/Shop/Shop'
+import ProductPage from './Pages/ProductPage/ProductPage';
 
 const App = () => {
   useEffect(() => {
@@ -20,12 +21,7 @@ const App = () => {
         <Route index element={<Home/>}/>
         <Route path='/shop' element={<RootLayout/>}>
           <Route index element={<Shop/>}/>
-          <Route path='/shop/cleanser' element={'This is cleanser page'}/>
-          <Route path='/shop/toner' element={'This is toner page'}/>
-          <Route path='/shop/mask' element={'This is mask page'}/>
-          <Route path='/shop/emulsion' element={'This is emulsion page'}/>
-          <Route path='/shop/cream' element={'This is cream page'}/>
-          <Route path='/shop/bodymist' element={'This is bodymist page'}/>
+          <Route path='/shop/:name' element={<ProductPage/>}></Route>
         </Route>
       </Routes>
     </BrowserRouter>

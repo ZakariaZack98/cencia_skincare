@@ -15,7 +15,7 @@ const InstructionSlide = ({ imgUrl, title, textContent, onProductPage, retailPri
             <div>
               <div className="flex gap-x-4 mb-2">
                 <strike className="text-2xl font-dmSans font-black text-red-500">{retailPrice}$</strike>
-                <span className="text-4xl font-dmSans font-black text-green-800">{preferredPrice}$</span>
+                <span className="text-4xl font-dmSans font-black text-green-500">{preferredPrice}$</span>
               </div>
               <div className="flex gap-x-2">
                 <Button label={"Add to Cart"} colorClass="bg-pink-800" />

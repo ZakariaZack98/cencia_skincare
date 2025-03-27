@@ -181,8 +181,8 @@ export const getProductData = () => {
         howToUse: {
           imgUrl: 'https://uploads.livepure.com/page/651/9f5e78f20ff43cc0af40fe077e107e1e.png?v=1697472657',
           contents: [
-            "Step 1: When washing your face, take a reasonable amount onto your hand and make rich foam.",
-            "Step 2: Gently massage your skin to cleanse and thoroughly rinse off with lukewarm water. Use twice daily.",
+            "  When washing your face, take a reasonable amount onto your hand and make rich foam.",
+            "   Gently massage your skin to cleanse and thoroughly rinse off with lukewarm water. Use twice daily.",
           ]
         },
         getProductIngredients() {
@@ -218,8 +218,8 @@ export const getProductData = () => {
         howToUse: {
           imgUrl: 'https://uploads.livepure.com/page/652/d9c62dde6d03af973a89d1ad7bc7d98e.png?v=1697529343',
           contents: [
-            "Step 1: After cleansing your face, pump a reasonable onto the palm of your hands and evenly apply",
-            "Step 2: Gently dab to be absorbed by skin.",
+            "  After cleansing your face, pump a reasonable onto the palm of your hands and evenly apply",
+            "   Gently dab to be absorbed by skin.",
           ]
         },
         getProductIngredients() {
@@ -252,10 +252,10 @@ export const getProductData = () => {
           ]
         },
         howToUse: {
-          imgUrl: 'hhttps://uploads.livepure.com/page/684/ed327ccae0c8225e77491f02a646fe8e.png',
+          imgUrl: 'https://uploads.livepure.com/page/684/ed327ccae0c8225e77491f02a646fe8e.png',
           contents: [
-            "Step 1: Apply the sheet evenly over your face.",
-            "Step 2: After 10-20 minutes, remove the sheet and pat gently to absorb the remaining essence.",
+            "  Apply the sheet evenly over your face.",
+            "   After 10-20 minutes, remove the sheet and pat gently to absorb the remaining essence.",
           ]
         },
         getProductIngredients() {
@@ -291,8 +291,8 @@ export const getProductData = () => {
         howToUse: {
           imgUrl: 'https://uploads.livepure.com/page/651/9f5e78f20ff43cc0af40fe077e107e1e.png?v=1697472657',
           contents: [
-            "Step 1: When washing your face, take a reasonable amount onto your hand and make rich foam.",
-            "Step 2: Gently massage your skin to cleanse and thoroughly rinse off with lukewarm water. Use twice daily.",
+            "  When washing your face, take a reasonable amount onto your hand and make rich foam.",
+            "   Gently massage your skin to cleanse and thoroughly rinse off with lukewarm water. Use twice daily.",
           ]
         },
         getProductIngredients() {
@@ -325,10 +325,10 @@ export const getProductData = () => {
           ]
         },
         howToUse: {
-          imgUrl: 'hhttps://uploads.livepure.com/page/684/ed327ccae0c8225e77491f02a646fe8e.png',
+          imgUrl: 'https://uploads.livepure.com/page/684/ed327ccae0c8225e77491f02a646fe8e.png',
           contents: [
-            "Step 1: Apply the sheet evenly over your face.",
-            "Step 2: After 10-20 minutes, remove the sheet and pat gently to absorb the remaining essence.",
+            "  Apply the sheet evenly over your face.",
+            "   After 10-20 minutes, remove the sheet and pat gently to absorb the remaining essence.",
           ]
         },
         getProductIngredients() {
@@ -364,8 +364,8 @@ export const getProductData = () => {
         howToUse: {
           imgUrl: 'https://uploads.livepure.com/page/651/9f5e78f20ff43cc0af40fe077e107e1e.png?v=1697472657',
           contents: [
-            "Step 1: When washing your face, take a reasonable amount onto your hand and make rich foam.",
-            "Step 2: Gently massage your skin to cleanse and thoroughly rinse off with lukewarm water. Use twice daily.",
+            "  When washing your face, take a reasonable amount onto your hand and make rich foam.",
+            "   Gently massage your skin to cleanse and thoroughly rinse off with lukewarm water. Use twice daily.",
           ]
         },
         getProductIngredients() {

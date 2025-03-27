@@ -31,6 +31,16 @@
   transform: rotate(12deg) scale(1.25) translateY(-80px);
 }
 
+.brwnGrad {
+  background: rgb(240,192,126);
+  background: linear-gradient(138deg, rgba(240,192,126,1) 0%, rgba(240,192,126,1) 56%, rgba(252,236,215,1) 100%); 
+}
+
+.darkGrad {
+  background: rgb(119,53,39);
+  background: linear-gradient(43deg, rgba(119,53,39,1) 42%, rgba(0,0,0,1) 100%); 
+}
+
 .slick-slider .slick-dots {
   transform: translateY(-40px)
 }

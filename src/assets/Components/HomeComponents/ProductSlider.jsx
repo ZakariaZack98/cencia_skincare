@@ -85,7 +85,7 @@ const ProductSlider = ({ data }) => {
   };
   return (
     <div className="bg-lightPink dark:bg-gray-800 w-full py-25">
-      <h1 className="font-dmSans font-black text-[100px] mb-20 text-accentBrwn text-center opacity-50">Our Products</h1>
+      <h1 className="font-dmSans font-black text-[80px] mb-20 text-accentBrwn text-center opacity-50">Complete your C'ENCIA Routine</h1>
       <div className="w-[95%] mx-auto">
         <Slider {...settings}>
           {data?.map((item) => {

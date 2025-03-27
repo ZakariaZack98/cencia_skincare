@@ -10,7 +10,7 @@ const Shop = () => {
     <>
       <div className="productGrid bg-lightPink dark:bg-gray-800 py-50">
         <h1 className="text-center text-accentBrwn dark:text-gray-700 font-black text-[80px] font-dmSans mb-20">
-          Complete your C'ENCIA Collection
+          Complete your C'ENCIA Routine
         </h1>
         <div className="container mx-auto">
           <div className="flex justify-center items-center gap-y-20 flex-wrap my-10">

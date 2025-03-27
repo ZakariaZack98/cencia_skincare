@@ -28,7 +28,7 @@ const Home = () => {
       {/* ============================Steps slider Part================================ */}
       <BodyMists data={showCaseData}/>
       <ProductSlider data={productData}/>
-      <SingleFeature data={singleFeatureData[1]}/>
+      <SingleFeature data={singleFeatureData[1]} reverse="true"/>
       <NewsLetter/>
       <Footer/>
     </>

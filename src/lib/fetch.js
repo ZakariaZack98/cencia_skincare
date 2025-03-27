@@ -119,6 +119,7 @@ export const getProductData = () => {
       name: 'PURE Foam Cleanser',
       retailPrice: 17.99,
       preferredPrice: 14.99,
+      pageLink: './cleanser'
     },
     {
       pid: 10022,
@@ -126,6 +127,7 @@ export const getProductData = () => {
       name: 'PURE Toaner',
       retailPrice: 15.99,
       preferredPrice: 12.99,
+      pageLink: './toaner'
     },
     {
       pid: 10023,
@@ -133,6 +135,7 @@ export const getProductData = () => {
       name: 'PURE Mask',
       retailPrice: 45.99,
       preferredPrice: 34.99,
+      pageLink: './mask'
     },
     {
       pid: 10024,
@@ -140,6 +143,7 @@ export const getProductData = () => {
       name: 'PURE Imulsion',
       retailPrice: 38.99,
       preferredPrice: 32.99,
+      pageLink: './emulsion'
     },
     {
       pid: 10025,
@@ -147,6 +151,7 @@ export const getProductData = () => {
       name: 'PURE Cream',
       retailPrice: 87.99,
       preferredPrice: 70.00,
+      pageLink: './cream'
     },
     {
       pid: 10026,
@@ -154,6 +159,7 @@ export const getProductData = () => {
       name: 'PURE Body Mist',
       retailPrice: 10.99,
       preferredPrice: 8.99,
+      pageLink: './bodymist'
     },
   ]
 

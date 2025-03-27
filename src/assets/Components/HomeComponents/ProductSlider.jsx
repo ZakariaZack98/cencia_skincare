@@ -99,6 +99,7 @@ const ProductSlider = ({ data }) => {
                 retailPrice={item.retailPrice}
                 buyHandler={item.buyHandler}
                 cartHandler={item.cartHandler}
+                pageLink={item.pageLink}
               />
             );
           })}

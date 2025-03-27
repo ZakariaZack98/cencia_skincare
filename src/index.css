@@ -31,7 +31,9 @@
   transform: rotate(12deg) scale(1.25) translateY(-80px);
 }
 
-
+.slick-slider .slick-dots {
+  transform: translateY(-40px)
+}
 
 /* Ensure higher specificity for the dots */
 .slick-slider .slick-dots li button:before {

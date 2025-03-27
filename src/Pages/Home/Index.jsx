@@ -25,7 +25,6 @@ const Home = () => {
       <section className="bg-white dark:bg-gray-700 pb-1">
         <InstructionSlider data={instructionSliderData}/>
       </section>
-      <div className="bg-white dark:bg-gray-700 h-[50px] "></div>
       {/* ============================Steps slider Part================================ */}
       <BodyMists data={showCaseData}/>
       <ProductSlider data={productData}/>

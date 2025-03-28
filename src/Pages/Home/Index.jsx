@@ -1,13 +1,13 @@
-import React from "react";
-import VideoBackground from "../../assets/Components/VideoBG";
+import React, { useEffect } from "react";
+import VideoBackground from "../../Components/VideoBG";
 import { getFeatureData, getProductData, getShowCaseData, getSingleFeatureData } from "../../lib/fetch";
-import SingleFeature from "../../assets/Components/CommonComponents/SingleFeature";
-import InstructionSlider from "../../assets/Components/HomeComponents/InstructionSlider";
-import FeatureSection from "../../assets/Components/HomeComponents/FeatureSection";
-import BodyMists from "../../assets/Components/HomeComponents/BodyMists";
-import ProductSlider from "../../assets/Components/HomeComponents/ProductSlider";
-import NewsLetter from "../../assets/Components/HomeComponents/NewsLetter";
-import Footer from "../../assets/Components/HomeComponents/Footer";
+import SingleFeature from "../../Components/CommonComponents/SingleFeature";
+import InstructionSlider from "../../Components/HomeComponents/InstructionSlider";
+import FeatureSection from "../../Components/HomeComponents/FeatureSection";
+import BodyMists from "../../Components/HomeComponents/BodyMists";
+import ProductSlider from "../../Components/HomeComponents/ProductSlider";
+import NewsLetter from "../..//Components/HomeComponents/NewsLetter";
+import Footer from "../../Components/HomeComponents/Footer";
 
 
 const Home = () => {
@@ -16,6 +16,14 @@ const Home = () => {
   const showCaseData = getShowCaseData();
   const productData = getProductData();
   const instructionSliderData = productData.map(item => item.sliderData);
+  
+  useEffect(() => {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth', 
+      });
+    }, []);
+  
   return (
     <>
       <VideoBackground />

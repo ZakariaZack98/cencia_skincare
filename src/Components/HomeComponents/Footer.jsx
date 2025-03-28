@@ -17,14 +17,12 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* Payment Gateway Icons */}
         <div className="flex justify-center items-center gap-x-6 mt-5">
           <FaCcVisa className="text-4xl hover:text-gray-300 transition duration-300" />
           <FaCcMastercard className="text-4xl hover:text-gray-300 transition duration-300" />
           <FaCcPaypal className="text-4xl hover:text-gray-300 transition duration-300" />
         </div>
 
-        {/* Footer Text */}
         <p className="text-center mt-5 font-dmSans text-sm">
           © 2025 C'ENCIA Skincare. All rights reserved.
         </p>

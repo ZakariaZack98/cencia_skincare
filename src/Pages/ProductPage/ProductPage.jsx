@@ -1,10 +1,10 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { useLocation } from 'react-router-dom'
 import { getProductData } from '../../lib/fetch';
-import InstructionSlide from '../../assets/Components/CommonComponents/InstructionSlide';
-import Ingredients from '../../assets/Components/ProductPageComponents/Ingredients';
-import InfoBanner from '../../assets/Components/ProductPageComponents/InfoBanner';
-import ProductSlider from '../../assets/Components/HomeComponents/ProductSlider';
+import InstructionSlide from '../../Components/CommonComponents/InstructionSlide';
+import Ingredients from '../../Components/ProductPageComponents/Ingredients';
+import InfoBanner from '../../Components/ProductPageComponents/InfoBanner';
+import ProductSlider from '../../Components/HomeComponents/ProductSlider';
 
 const ProductPage = () => {
   const location = useLocation();
@@ -15,6 +15,10 @@ const ProductPage = () => {
   const productPageData = matchedProduct.productPageData;
   const productIngredientData = productPageData.getProductIngredients();
   
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []); 
+
   return (
     <>
       <InstructionSlide imgUrl={slideData.imgUrl} title={slideData.title} textContent={slideData.textContent} onProductPage={true} retailPrice={matchedProduct.retailPrice} preferredPrice={matchedProduct.preferredPrice}/>

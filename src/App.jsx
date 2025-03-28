@@ -4,7 +4,7 @@ import Home from './Pages/Home/Index'
 import { useEffect } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import RootLayout from './assets/Components/RootLayout/RootLayout';
+import RootLayout from './Components/RootLayout/RootLayout';
 import Shop from './Pages/Shop/Shop'
 import ProductPage from './Pages/ProductPage/ProductPage';
 

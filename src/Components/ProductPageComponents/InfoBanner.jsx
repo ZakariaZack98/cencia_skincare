@@ -7,7 +7,7 @@ const InfoBanner = ({data, howTo}) => {
       <div className="container mx-auto">
         <div className={`flex items-stretch gap-x-10 ${howTo ? 'flex-row-reverse' : ''}`}>
           <div
-            className={`${howTo ? 'darkGrad' : 'brwnGrad'} w-[70%] rounded-4xl flex justify-center items-center`}>
+            className={`${howTo ? 'darkGrad' : 'brwnGrad'} w-[70%] rounded-4xl flex justify-center items-center`} data-aos="zoom-in" data-aos-duration="700">
               {
                 howTo ? (
                   <div className="textSec w-[80%] text-lightPink">
@@ -38,7 +38,7 @@ const InfoBanner = ({data, howTo}) => {
                 </div>)
               }
             </div>
-          <picture className="w-[30%] rounded-4xl overflow-hidden">
+          <picture className="w-[30%] rounded-4xl overflow-hidden" data-aos="zoom-in" data-aos-duration="700" data-aos-delay="500">
             <img src={data.imgUrl}/>
           </picture>
         </div>

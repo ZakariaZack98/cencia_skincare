@@ -1,11 +1,19 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { getProductData } from "../../lib/fetch";
-import InstructionSlider from "../../assets/Components/HomeComponents/InstructionSlider";
-import ProductCard from "../../assets/Components/CommonComponents/ProductCard";
+import InstructionSlider from "../../Components/HomeComponents/InstructionSlider";
+import ProductCard from "../../Components/CommonComponents/ProductCard";
 
 const Shop = () => {
   const productData = getProductData();
   const instructionSliderData = productData.map(item => item.sliderData);
+  
+  useEffect(() => {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth', 
+      });
+    }, []);
+  
   return (
     <>
       <div className="productGrid bg-lightPink dark:bg-gray-800 py-50">

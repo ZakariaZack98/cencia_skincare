@@ -10,7 +10,7 @@ const Ingredients = ({data}) => {
         </h1>
         <div className="flex justify-around w-full">
           {
-            data?.map((ingredientItem, idx) => <IngredientCard data={ingredientItem} isOdd={idx%2==1 ? true : false} animationDelay={idx * 200}/>)
+            data?.map((ingredientItem, idx) => <IngredientCard key={ingredientItem.id} data={ingredientItem} isOdd={idx%2==1 ? true : false} animationDelay={idx * 200}/>)
           }
         </div>
       </div>

@@ -56,12 +56,14 @@ export const getShowCaseData = () => {
     {
       id: 1,
       imgUrl: '/pr1.png',
-      textContent: 'Wanna Smell Like Raspberries?'
+      textContent: 'Wanna Smell Like Raspberries?',
+      pageLink: '/shop/bodymist'
     },
     {
       id: 2,
       imgUrl: '/pr4.png',
-      textContent: 'Smells Like Christmas in a Bottle'
+      textContent: 'Smells Like Christmas in a Bottle',
+      pageLink: '/comingsoon'
     },
   ]
 }

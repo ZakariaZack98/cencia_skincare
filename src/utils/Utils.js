@@ -3,7 +3,7 @@ import { getProductData } from "../lib/fetch";
 const productData = getProductData();
 
 /**
- * TODO: Check if the product already exists in the cart
+ * TODO: Check if the product already exists in the cart=======================
  * @param {Array} cart
  * @param {number} pid
  * @returns {boolean} - True if the product exists, false otherwise
@@ -12,7 +12,7 @@ export const ExistanceInCart = (cart, pid) =>
   Boolean(cart.find((product) => product.pid === pid));
 
 /**
- * TODO: Add a product to the cart
+ * TODO: Add a product to the cart=============================================
  * @param {Array} cart 
  * @param {Function} setCart
  * @param {number} pid

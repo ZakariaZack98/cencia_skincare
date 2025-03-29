@@ -11,7 +11,7 @@ const BodyMists = ({data}) => {
               data?.map((item, idx) => {
                 return (
                   <div key={item.id} className={`${!idx % 2 === 0 ? 'mt-70': ''}`}>
-                    <RotatingShowcase imgUrl={item.imgUrl} textContent={item.textContent}/>
+                    <RotatingShowcase imgUrl={item.imgUrl} textContent={item.textContent} pageLink={item.pageLink}/>
                   </div>
                 )
               })

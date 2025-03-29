@@ -1,8 +1,10 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
-const RotatingShowcase = ({imgUrl, textContent}) => {
+const RotatingShowcase = ({imgUrl, textContent, pageLink}) => {
+  const navigate = useNavigate();
   return (
-    <div className="rotate flex w-[40dvw] bg-white dark:bg-gray-700 justify-center items-end gap-x-10 hover:shadow-2xl duration-800 cursor-pointer">
+    <div className="rotate flex w-[40dvw] bg-white dark:bg-gray-700 justify-center items-end gap-x-10 hover:shadow-2xl duration-800 cursor-pointer" onClick={() => navigate(pageLink)}>
       <picture>
         <img src={imgUrl} alt="" className=" pr h-[500px] object-cover duration-1000 z-0" />
       </picture>

@@ -27,7 +27,7 @@ const ProductCard = ({
       <picture>
         <img
           src={imgUrl}
-          className="w-full h-[300px] object-cover object-center"
+          className="w-full h-fit object-cover object-center"
         />
       </picture>
       <div className="textSec mt-1">

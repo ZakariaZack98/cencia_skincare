@@ -2,23 +2,22 @@ import React, { useContext } from 'react'
 import { RxCrossCircled } from 'react-icons/rx'
 import { CartContext } from '../../contexts/CartContext'
 
-const CartItemCard = ({cartData, setCartData, pid, imgUrl, name, price, qty, subtotal}) => {
-  const {_, setCart} = useContext(CartContext);
+const CartItemCard = ({pid, imgUrl, name, price, qty, subtotal}) => {
+  const {cart, setCart} = useContext(CartContext);
 
   const handleQtyChange = (e, pid) => {
-    const newCartData = [...cartData];
-    const targetProduct = newCartData.find(product => product.pid == pid);
-    const idx = newCartData.indexOf(targetProduct);
-    newCartData[idx].qty = Number(e.currentTarget.value);
-    newCartData[idx].subtotal = Number((targetProduct.price * e.currentTarget.value).toFixed(2));
-    setCartData(newCartData);
+    const newCart = [...cart];
+    const targetProduct = newCart.find(product => product.pid == pid);
+    const idx = newCart.indexOf(targetProduct);
+    newCart[idx].qty = Number(e.currentTarget.value);
+    newCart[idx].subtotal = Number((targetProduct.price * e.currentTarget.value).toFixed(2));
+    setCart(newCart);
   } 
 
   const removeCartItem = (pid) => {
-    const newCartData = [...cartData];
-    const updatedCartData = newCartData.filter(product => product.pid !== pid);
-    setCartData(updatedCartData);
-    setCart(updatedCartData.map(product => product.pid))
+    const newCart = [...cart];
+    const updatedCart = newCart.filter(product => product.pid !== pid);
+    setCart(updatedCart);
   }
 
   return (
@@ -31,7 +30,7 @@ const CartItemCard = ({cartData, setCartData, pid, imgUrl, name, price, qty, sub
       </div>
       <div className="w-[10%]"><p className='text-end'>{price}$</p></div>
       <div className="w-[20%] text-center">
-        <select name="qty" id="qty" className='px-4 py-1 border-2 border-black' onChange={(e) => handleQtyChange(e, pid)}>
+        <select name="qty" id="qty" className='px-4 py-1 border-2 border-black' value={qty} onChange={(e) => handleQtyChange(e, pid)}>
           {[1, 2, 3, 4, 5].map(qty => {
             return <option key={qty} value={qty}>{qty}</option>
           })}

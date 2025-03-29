@@ -1,18 +1,20 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useContext, useEffect} from "react";
 import { CartContext } from "../../contexts/CartContext";
-import { getProductData } from "../../lib/fetch";
 import CartItemCard from "../../Components/CommonComponents/CartItemCard";
 
 const Cart = () => {
-  const productData = getProductData();
-  const { cart, setCart } = useContext(CartContext);
+  const { cart } = useContext(CartContext);
 
 
-  const getSubTotal = () =>Number(cart.map((product) => product.subtotal).reduce((a, b) => Number(a) + Number(b)).toFixed(2));
+  const getSubTotal = () =>{
+    const res = Number(cart.map((product) => product.subtotal).reduce((a, b) => Number(a) + Number(b)).toFixed(2));
+    console.log("subt", res)
+    return res;
+  };
 
   const getCalculatedVat = () => Number(((getSubTotal() * 15) / 100).toFixed(2));
 
-  const getGrandTotal = () => getSubTotal() + getCalculatedVat() + 10;
+  const getGrandTotal = () => (getSubTotal() + getCalculatedVat() + 10).toFixed(2);
 
   useEffect(() => {
     window.scrollTo({
@@ -39,8 +41,6 @@ const Cart = () => {
                 {cart?.map((product) => (
                   <CartItemCard
                     key={product.pid}
-                    cartData={cart}
-                    setCartData={setCart}
                     pid={product.pid}
                     imgUrl={product.imgUrl}
                     name={product.name}

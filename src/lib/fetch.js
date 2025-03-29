@@ -165,6 +165,7 @@ export const getProductData = () => {
       pageLink: '/shop/cleanser',
       sliderData: {
         id: 1,
+        
         imgUrl: 'https://uploads.livepure.com/page/15/feaca5a4ce60c0510ae9c78dafaf1e8d.png',
         title: `STEP 1: C'ENCIA PURE FOAM CLEANSER`,
         textContent: `Consectetur eu consequat ad ullamco anim qui fugiat dolor elit excepteur sit Lorem. Nisi qui pariatur non Lorem adipisicing ad dolore exercitation magna sit dolore fugiat adipisicing.`,

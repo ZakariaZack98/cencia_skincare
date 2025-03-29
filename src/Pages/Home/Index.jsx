@@ -16,6 +16,8 @@ const Home = () => {
   const showCaseData = getShowCaseData();
   const productData = getProductData();
   const instructionSliderData = productData.map(item => item.sliderData);
+  //** adding pageLink to each slider data object so the rendered slides can connect to productpage
+  const updatedInstructionSliderData = instructionSliderData.map((data, idx) => ({...data, pageLink: productData[idx].pageLink}))
   
   useEffect(() => {
       window.scrollTo({
@@ -31,7 +33,7 @@ const Home = () => {
       <SingleFeature data={singleFeatureData[0]}/>
       {/* ============================Steps Slider Part================================ */}
       <section className="bg-white dark:bg-gray-700 pb-1">
-        <InstructionSlider data={instructionSliderData}/>
+        <InstructionSlider data={updatedInstructionSliderData}/>
       </section>
       {/* ============================Steps slider Part================================ */}
       <BodyMists data={showCaseData}/>

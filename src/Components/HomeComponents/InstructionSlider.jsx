@@ -51,6 +51,7 @@ const InstructionSlider = ({ data }) => {
         return (
           <div key={item.id}>
             <InstructionSlide
+              pageLink={item.pageLink}
               imgUrl={item.imgUrl}
               title={item.title}
               textContent={item.textContent}

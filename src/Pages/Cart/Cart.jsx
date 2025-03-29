@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { CartContext } from "../../contexts/CartContext";
 import { getProductData } from "../../lib/fetch";
 import CartItemCard from "../../Components/CommonComponents/CartItemCard";
@@ -27,15 +27,20 @@ const Cart = () => {
 
   const getCalculatedVat = () => Number(((getSubTotal() * 15) / 100).toFixed(2));
 
-  const getGrandTotal = () => {
-    getSubTotal() + getCalculatedVat() + 10
-    console.log(getSubTotal() + getCalculatedVat() + 10)
-  };
+  const getGrandTotal = () => getSubTotal() + getCalculatedVat() + 10;
+
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth', 
+    });
+  }, []);
+
 
   
   return (
     <div className="cart bg-cover bg-center bg-no-repeat z-0 font-dmSans">
-      <div className="clrOverlay w-full h-full py-30 z-10">
+      <div className="clrOverlay w-full h-full py-10 z-10">
         <div className="w-[95dvw] mx-auto flex flex-col">
           <div className="flex w-full items-stretch gap-x-7">
             <div className="cartList min-h-[50dvh] w-[60%] p-4 bg-lightPink text-gray-800 dark:bg-gray-800 dark:text-lightPink font-semibold rounded-2xl">
@@ -64,7 +69,7 @@ const Cart = () => {
             <div className="amountCalculation min-h-[50dvh] w-[40%] p-4 bg-lightPink text-gray-800 dark:bg-gray-800 dark:text-lightPink rounded-2xl">
               <p className="text-xl pb-3 border-b-gray-300 border-b-4 font-semibold">Cart Total</p>
               {cart?.length > 0 && (
-                <div className=" border-b-gray-300 border-b-4">
+                <div>
                   <div className="amount flex justify-between py-5">
                     <p className="text-2xl font-semibold">Subtotal</p>
                     <p className="text-2xl font-semibold">{getSubTotal()}$</p>
@@ -75,7 +80,7 @@ const Cart = () => {
                     </p>
                     <p className="text-lg font-semibold">{getCalculatedVat()}$</p>
                   </div>
-                  <div className="flex justify-between">
+                  <div className="flex justify-between  border-b-gray-300 border-b-4 pb-3">
                     <p className="text-lg font-semibold">
                       Shipping Fee
                     </p>
@@ -85,6 +90,7 @@ const Cart = () => {
                     <p className="text-2xl font-semibold">Grand Total</p>
                     <p className="text-2xl font-semibold">{getGrandTotal()}$</p>
                   </div>
+                  <img src="https://livepure.com/img/footer_cards.png" alt="" className="ml-auto cursor-pointer"/>
                 </div>
               )}
             </div>

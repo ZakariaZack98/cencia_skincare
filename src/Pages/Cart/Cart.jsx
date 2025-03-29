@@ -7,23 +7,8 @@ const Cart = () => {
   const productData = getProductData();
   const { cart, setCart } = useContext(CartContext);
 
-  // TODO: using the cart elements (product id) to find the desired product from the productData array
-  const fetchedCartProducts = cart.map((cartItemID) => productData.find((product) => product.pid == cartItemID));
 
-  const [cartData, setCartData] = useState(
-    fetchedCartProducts.map((product) => {
-      return {
-        pid: product.pid,
-        imgUrl: product.imgUrl,
-        name: product.name,
-        price: product.preferredPrice,
-        qty: 1,
-        subtotal: product.preferredPrice,
-      };
-    })
-  );
-
-  const getSubTotal = () =>Number(cartData.map((product) => product.subtotal).reduce((a, b) => Number(a) + Number(b)).toFixed(2));
+  const getSubTotal = () =>Number(cart.map((product) => product.subtotal).reduce((a, b) => Number(a) + Number(b)).toFixed(2));
 
   const getCalculatedVat = () => Number(((getSubTotal() * 15) / 100).toFixed(2));
 
@@ -51,11 +36,11 @@ const Cart = () => {
                 <p className="w-[20%] text-xl ms-3">Subtotal</p>
               </div>
               <div className="flex flex-col">
-                {cartData?.map((product) => (
+                {cart?.map((product) => (
                   <CartItemCard
                     key={product.pid}
-                    cartData={cartData}
-                    setCartData={setCartData}
+                    cartData={cart}
+                    setCartData={setCart}
                     pid={product.pid}
                     imgUrl={product.imgUrl}
                     name={product.name}

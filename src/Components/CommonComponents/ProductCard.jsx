@@ -2,18 +2,12 @@ import React, { useContext } from "react";
 import Button from "./Button";
 import { useNavigate } from "react-router-dom";
 import { CartContext } from "../../contexts/CartContext";
+import { getProductData } from "../../lib/fetch";
 
-const ProductCard = ({
-  pid,
-  imgUrl,
-  name,
-  retailPrice,
-  preferredPrice,
-  buyHandler,
-  pageLink = "/error",
-}) => {
+const ProductCard = ({ pid, imgUrl, name, retailPrice, preferredPrice, buyHandler, pageLink = "/error" }) => {
   const navigate = useNavigate();
   const { cart, setCart } = useContext(CartContext);
+  const productData = getProductData();
   return (
     <div
       className="w-[21dvw] p-5 border-2 border-solid border-accentBrwn rounded-xl bg-white dark:bg-gray-700 dark:text-lightPink font-dmSans mx-auto shadow-xl cursor-pointer"
@@ -42,14 +36,19 @@ const ProductCard = ({
           <Button
             clickHandler={(e) => {
               e.stopPropagation();
-              if(cart.includes(pid)) {
-                alert('You already have this item in your card');
-                return;
-              }
+              //!add a function to prevent dupe products inside cart
               const newCart = [...cart];
-              newCart.push(pid);
+              const targetProduct = productData.find((product) => product.pid == pid);
+              const productForCart = {
+                pid: targetProduct.pid,
+                imgUrl: targetProduct.imgUrl,
+                name: targetProduct.name,
+                price: targetProduct.preferredPrice,
+                qty: 1,
+                subtotal: targetProduct.preferredPrice,
+              };
+              newCart.push(productForCart);
               setCart(newCart);
-              console.log(cart);
             }}
             label={"Add to cart"}
             colorClass={"bg-pink-800"}

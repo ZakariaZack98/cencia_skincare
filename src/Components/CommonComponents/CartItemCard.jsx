@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from 'react'
+import React, { useContext } from 'react'
 import { RxCrossCircled } from 'react-icons/rx'
 import { CartContext } from '../../contexts/CartContext'
 
@@ -9,8 +9,8 @@ const CartItemCard = ({cartData, setCartData, pid, imgUrl, name, price, qty, sub
     const newCartData = [...cartData];
     const targetProduct = newCartData.find(product => product.pid == pid);
     const idx = newCartData.indexOf(targetProduct);
-    newCartData[idx].qty = e.currentTarget.value;
-    newCartData[idx].subtotal = (targetProduct.price * e.currentTarget.value).toFixed(2);
+    newCartData[idx].qty = Number(e.currentTarget.value);
+    newCartData[idx].subtotal = Number((targetProduct.price * e.currentTarget.value).toFixed(2));
     setCartData(newCartData);
   } 
 
@@ -33,7 +33,7 @@ const CartItemCard = ({cartData, setCartData, pid, imgUrl, name, price, qty, sub
       <div className="w-[20%] text-center">
         <select name="qty" id="qty" className='px-4 py-1 border-2 border-black' onChange={(e) => handleQtyChange(e, pid)}>
           {[1, 2, 3, 4, 5].map(qty => {
-            return <option value={qty}>{qty}</option>
+            return <option key={qty} value={qty}>{qty}</option>
           })}
         </select>
       </div>

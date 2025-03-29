@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useContext } from "react";
 import Button from "./Button";
 import { useNavigate } from "react-router-dom";
+import { CartContext } from "../../contexts/CartContext";
 
 const ProductCard = ({
   pid,
@@ -9,10 +10,10 @@ const ProductCard = ({
   retailPrice,
   preferredPrice,
   buyHandler,
-  cartHandler,
   pageLink = "/error",
 }) => {
   const navigate = useNavigate();
+  const { cart, setCart } = useContext(CartContext);
   return (
     <div
       className="w-[21dvw] p-5 border-2 border-solid border-accentBrwn rounded-xl bg-white dark:bg-gray-700 dark:text-lightPink font-dmSans mx-auto shadow-xl cursor-pointer"
@@ -41,7 +42,14 @@ const ProductCard = ({
           <Button
             clickHandler={(e) => {
               e.stopPropagation();
-              cartHandler(e);
+              if(cart.includes(pid)) {
+                alert('You already have this item in your card');
+                return;
+              }
+              const newCart = [...cart];
+              newCart.push(pid);
+              setCart(newCart);
+              console.log(cart);
             }}
             label={"Add to cart"}
             colorClass={"bg-pink-800"}

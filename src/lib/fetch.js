@@ -1,4 +1,6 @@
+import { useContext } from "react";
 import { useNavigate } from "react-router-dom"
+import { CartContext } from "../contexts/CartContext";
 
 export const getFeatureData = () => {
   return [
@@ -70,6 +72,7 @@ export const getProductData = () => {
   const handleBuy = (id) => {
     console.log(id, 'awaiting payment')
   }
+
 
   const keyIngredientsList = [
       {
@@ -375,7 +378,5 @@ export const getProductData = () => {
     },
   ]
 
-  return rawProductsData.map(item => ({...item, buyHandler: () => handleBuy(item.pid), cartHandler: () => handleCart(item.pid)})
-  )
-
+  return rawProductsData;
 }

@@ -8,6 +8,7 @@ import Shop from "./Pages/Shop/Shop";
 import ProductPage from "./Pages/ProductPage/ProductPage";
 import { CartProvider } from "./contexts/CartContext";
 import CartButton from "./Components/HomeComponents/CartButton";
+import Cart from "./Pages/Cart/Cart";
 
 const App = () => {
   useEffect(() => {
@@ -17,20 +18,16 @@ const App = () => {
     });
   }, []);
 
-  const handleCartClick = () => {
-    console.log("Cart button clicked!");
-    // Add logic to navigate to the cart page or open a cart modal
-  };
-
   return (
     <CartProvider>
       <BrowserRouter>
         {/* CartButton is added here to make it global */}
-        <CartButton onClick={handleCartClick} />
+        <CartButton />
         <Routes>
           <Route index element={<Home />} />
           <Route path="/shop" element={<RootLayout />}>
             <Route index element={<Shop />} />
+            <Route path="/shop/cart" element={<Cart/>} />
             <Route path="/shop/:name" element={<ProductPage />} />
           </Route>
         </Routes>

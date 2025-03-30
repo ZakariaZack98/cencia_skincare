@@ -394,9 +394,9 @@ export const getBlogData = () => {
       auther: "Sophia Carter",
       publishedAt: "10 Mar, 2025",
       title: "Discover the New YSL Loveshine Lip Oil Collection",
-      summery:
-        "YSL introduces a stunning new lip oil collection with vibrant shades and a glossy finish.",
-        imgLinkCollections: [
+      summery: "YSL introduces a stunning new lip oil collection with vibrant shades and a glossy finish.",
+      tags: ['tips', 'ysl', 'review'],
+      imgLinkCollections: [
           "https://thebeautylookbook.com/wp-content/uploads/2025/03/YSL-loveshine-plumping-lip-oil-gloss-1080x1620.jpg",
           "https://thebeautylookbook.com/wp-content/uploads/2025/03/YSL-Loveshine-Plumping-Lip-Oil-Gloss-2-Lucky-Moonstone-1080x1620.jpg",
           "https://thebeautylookbook.com/wp-content/uploads/2025/03/YSL-Loveshine-Plumping-Lip-Oil-Gloss-8-Purple-Dream-1080x1620.jpg",

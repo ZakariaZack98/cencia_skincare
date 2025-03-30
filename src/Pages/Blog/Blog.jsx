@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { getBlogData, getShowCaseData } from "../../lib/fetch";
 import BlogGrid from "../../Components/BlogComponents/BlogGrid";
 import BodyMists from "../../Components/HomeComponents/BodyMists"
@@ -8,6 +8,14 @@ const Blog = () => {
   const trendingBlogData = blogData.filter((data) => data.category === "trending");
   const latestBlogData = blogData.filter((data) => data.category === "latest");
   const showCaseData = getShowCaseData()
+
+  useEffect(() => {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
+    }, []);
+
   return (
     <div className="bg-lightPink dark:bg-gray-800 py-30">
       <div className="container mx-auto">

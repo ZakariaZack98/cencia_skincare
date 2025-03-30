@@ -10,6 +10,7 @@ import { CartProvider } from "./contexts/CartContext";
 import CartButton from "./Components/HomeComponents/CartButton";
 import Cart from "./Pages/Cart/Cart";
 import Blog from "./Pages/Blog/Blog";
+import BlogPost from "./Pages/BlogPostPage/BlogPost";
 
 const App = () => {
   useEffect(() => {
@@ -33,6 +34,7 @@ const App = () => {
           </Route>
           <Route path="/blog" element={<RootLayout/>}>
             <Route index element={<Blog/>}/>
+            <Route path="/blog/:name" element={<BlogPost/>}/>
           </Route>
         </Routes>
       </BrowserRouter>

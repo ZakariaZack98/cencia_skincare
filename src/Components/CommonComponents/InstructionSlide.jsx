@@ -14,7 +14,7 @@ const InstructionSlide = ({pid, pageLink, imgUrl, title, textContent, onProductP
       </picture>
       <div className="textPart w-[60%] flex flex-col gap-y-5 ">
         <h2 className="title font-bodoni text-[40px] w-1/2">{title}</h2>
-        <p className="text-2xl font-bodoni leading-6 max-w-[90%]">{textContent}</p>
+        <p className="text-2xl font-playfair leading-6 max-w-[90%]">{textContent}</p>
         <div className="w-50">
           {onProductPage ? (
             <div>

@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Libre+Bodoni:ital,wght@0,400..700;1,400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Libre+Bodoni:ital,wght@0,400..700;1,400..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
 @import 'tailwindcss';
 
 :root {
@@ -21,14 +21,20 @@
   --font-dmSans: 'DM Sans', sans-serif;
   --font-bodoni: 'Libre Bodoni', sans-serif;
   --font-agraham: 'Agraham', sans-serif;
+  --font-playfair: "Playfair Display", serif;
 }
 
 .op {
   background-color: rgba(0, 0, 0, 0.336);
 }
 
+.pr {
+  filter: drop-shadow(10px 0px 4px rgba(0, 0, 0, 0.3));
+}
+
 .rotate:hover .pr {
   transform: rotate(12deg) scale(1.25) translateY(-80px);
+  filter: drop-shadow(30px 80px 20px rgba(0, 0, 0, 0.3));
 }
 
 .brwnGrad {

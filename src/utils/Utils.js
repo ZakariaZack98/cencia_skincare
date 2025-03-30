@@ -1,3 +1,4 @@
+import { toast } from "react-toastify";
 import { getProductData } from "../lib/fetch";
 
 const productData = getProductData();
@@ -19,7 +20,7 @@ export const ExistanceInCart = (cart, pid) =>
  */
 export const AddToCart = (cart, setCart, pid) => {
   if (ExistanceInCart(cart, pid)) {
-    alert("Item already exists in cart");
+    toast.warn('Item already added to cart.')
     return;
   }
   const newCart = [...cart];
@@ -34,4 +35,5 @@ export const AddToCart = (cart, setCart, pid) => {
   };
   newCart.push(productForCart);
   setCart(newCart);
+  toast.success('Items successfully added to cart')
 };

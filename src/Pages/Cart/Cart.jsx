@@ -1,9 +1,12 @@
 import React, { useContext, useEffect } from "react";
 import { CartContext } from "../../contexts/CartContext";
 import CartItemCard from "../../Components/CommonComponents/CartItemCard";
+import Button from "../../Components/CommonComponents/Button";
+import { useNavigate } from "react-router-dom";
 
 const Cart = () => {
   const { cart } = useContext(CartContext);
+  const navigate = useNavigate();
 
   const getSubTotal = () => {
     const res = Number(
@@ -58,8 +61,9 @@ const Cart = () => {
                   </div>
                 </div>
               ) : (
-                <div className="w-full h-full flex justify-center items-center">
+                <div className="w-full h-full flex flex-col gap-y-2 justify-center items-center">
                   <p className="font-bold dark:text-lightPink text-4xl">There is No Items In cart.</p>
+                  <Button label={'Continue Shopping'} clickHandler={() => navigate('/shop')}/>
                 </div>
               )}
             </div>

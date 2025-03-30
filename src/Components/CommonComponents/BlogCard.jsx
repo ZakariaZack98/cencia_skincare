@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 const BlogCard = ({ id, imgUrl, title, auther, date, summery }) => {
   const navigate = useNavigate();
   return (
-    <div className="max-w-sm bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700 flex flex-col justify-between">
+    <div className="max-w-sm bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-700 dark:border-gray-700 flex flex-col justify-between">
       <a href="#">
         <img
           className="rounded-t-lg h-70 w-full object-cover object-center"
@@ -19,11 +19,11 @@ const BlogCard = ({ id, imgUrl, title, auther, date, summery }) => {
           </h5>
         </a>
         <div className="flex justify-between pb-2 border-b-gray-300 border-b-[1px]">
-          <p>
-            <span>👤</span>
+          <p className="dark:text-lightPink">
+            <span >👤</span>
             {auther}
           </p>
-          <p>
+          <p className="dark:text-lightPink">
             <span>🕓</span>
             {date}
           </p>
@@ -36,7 +36,7 @@ const BlogCard = ({ id, imgUrl, title, auther, date, summery }) => {
             onClick={() => {
               navigate(`/blog/${id}`);
             }}
-            className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-accentBrwn rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-accentBrwn dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+            className="cursor-pointer inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-accentBrwn rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-accentBrwn dark:hover:bg-blue-700 dark:focus:ring-blue-800"
           >
             Read more
             <svg

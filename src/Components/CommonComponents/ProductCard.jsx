@@ -18,7 +18,7 @@ const ProductCard = ({
 
   return (
     <div
-      className="w-[21dvw] p-5 border-2 border-solid border-accentBrwn rounded-xl bg-white dark:bg-gray-700 dark:text-lightPink font-dmSans mx-auto shadow-xl cursor-pointer"
+      className="w-[21dvw] p-5 rounded-xl bg-white dark:bg-gray-700 dark:text-lightPink font-dmSans mx-auto shadow-xl cursor-pointer"
       onClick={(e) => {
         e.stopPropagation();
         navigate(pageLink);
@@ -27,7 +27,7 @@ const ProductCard = ({
       <picture>
         <img
           src={imgUrl}
-          className="w-full h-fit object-cover object-center"
+          className=" h-[250px] mx-auto object-cover object-center "
         />
       </picture>
       <div className="textSec mt-1">
@@ -40,7 +40,7 @@ const ProductCard = ({
           <Button
             clickHandler={(e) => {
               e.stopPropagation();
-              buyHandler(e);
+              return; //buying function goes here
             }}
             label={"Buy Now"}
             id={pid}

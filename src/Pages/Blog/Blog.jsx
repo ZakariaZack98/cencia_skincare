@@ -20,7 +20,7 @@ const Blog = () => {
     <div className="bg-lightPink dark:bg-gray-800 py-30">
       <div className="container mx-auto">
         <div className="headers mb-20">
-          <div className="h1 font-agraham text-[40px] text-center text-black">The beauty lookbook Blog</div>
+          <div className="h1 font-agraham text-[40px] text-center text-black dark:text-lightPink">The beauty lookbook Blog</div>
           <h3 className="font-bodoni text-4xl text-accentBrwn text-center">by C'ENCIA™</h3>
         </div>
         <div className="mainBody">

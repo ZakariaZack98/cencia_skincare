@@ -3,7 +3,7 @@ import React from "react";
 
 const Postbody = ({matchedPostData, textCollections, imagesCollection}) => {
   return (
-    <div className="postBody w-[70%]">
+    <div className="postBody w-[70%] dark:text-lightPink">
       <div className="tags flex justify-center gap-5 font-dmSans font-light text-accentBrwn">
         {
           matchedPostData?.tags?.map((tag, idx) => (
@@ -14,7 +14,7 @@ const Postbody = ({matchedPostData, textCollections, imagesCollection}) => {
           // !! the keys need to be fixed here
         }
       </div>
-      <h1 className="text-3xl text-center font-playfair py-2">{matchedPostData.title}</h1>
+      <h1 className="text-3xl text-center font-playfair py-2 ">{matchedPostData.title}</h1>
       <div className="flex justify-center gap-x-5 py-2 w-1/2 mx-auto opacity-50">
         <p className="font-bold">{matchedPostData.auther}</p>
         <p>{matchedPostData.publishedAt}</p>

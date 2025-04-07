@@ -12,6 +12,7 @@ import Cart from "./Pages/Cart/Cart";
 import Blog from "./Pages/Blog/Blog";
 import BlogPost from "./Pages/BlogPostPage/BlogPost";
 import { ClipLoader } from "react-spinners";
+import Error from "./Pages/Error/Error";
 
 const App = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -26,7 +27,7 @@ const App = () => {
       setIsLoading(false);
     }, 3000);
 
-    return () => clearTimeout(timer); // Cleanup the timer
+    return () => clearTimeout(timer);
   }, []);
 
   if (isLoading) {
@@ -52,6 +53,7 @@ const App = () => {
             <Route index element={<Blog />} />
             <Route path="/blog/:name" element={<BlogPost />} />
           </Route>
+          <Route path="*" element={<Error/>}/>
         </Routes>
       </BrowserRouter>
     </CartProvider>

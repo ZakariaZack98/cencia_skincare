@@ -1,6 +1,4 @@
-import { useContext } from "react";
 import { useNavigate } from "react-router-dom";
-import { CartContext } from "../contexts/CartContext";
 
 export const getFeatureData = () => {
   return [

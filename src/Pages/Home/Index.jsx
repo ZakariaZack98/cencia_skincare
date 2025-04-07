@@ -46,4 +46,3 @@ const Home = () => {
 };
 
 export default Home;
-{/* border-solid border-2 border-red-500 */}

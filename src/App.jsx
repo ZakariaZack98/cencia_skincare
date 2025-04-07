@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -11,30 +11,46 @@ import CartButton from "./Components/HomeComponents/CartButton";
 import Cart from "./Pages/Cart/Cart";
 import Blog from "./Pages/Blog/Blog";
 import BlogPost from "./Pages/BlogPostPage/BlogPost";
+import { ClipLoader } from "react-spinners";
 
 const App = () => {
+  const [isLoading, setIsLoading] = useState(true);
+
   useEffect(() => {
     AOS.init({
       duration: 300,
       once: true,
     });
+
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 3000);
+
+    return () => clearTimeout(timer); // Cleanup the timer
   }, []);
+
+  if (isLoading) {
+    return (
+      <div className="flex justify-center items-center h-screen bg-lightPink">
+        <ClipLoader color="#E69149" size={100} />
+      </div>
+    );
+  }
 
   return (
     <CartProvider>
       <BrowserRouter>
-        {/* CartButton is added here to make it global */}
         <CartButton />
         <Routes>
           <Route index element={<Home />} />
           <Route path="/shop" element={<RootLayout />}>
             <Route index element={<Shop />} />
-            <Route path="/shop/cart" element={<Cart/>} />
+            <Route path="/shop/cart" element={<Cart />} />
             <Route path="/shop/:name" element={<ProductPage />} />
           </Route>
-          <Route path="/blog" element={<RootLayout/>}>
-            <Route index element={<Blog/>}/>
-            <Route path="/blog/:name" element={<BlogPost/>}/>
+          <Route path="/blog" element={<RootLayout />}>
+            <Route index element={<Blog />} />
+            <Route path="/blog/:name" element={<BlogPost />} />
           </Route>
         </Routes>
       </BrowserRouter>

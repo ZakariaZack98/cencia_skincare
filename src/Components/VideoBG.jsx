@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import Navbar from "./HomeComponents/Navbar";
 
 const VideoBackground = () => {
   const [scrollY, setScrollY] = useState(0);
@@ -31,20 +30,19 @@ const VideoBackground = () => {
 
   return (
     <div className="fixed top-0 left-0 w-screen lg:h-screen h-[50dvh] overflow-hidden -z-10">
-      <video
-        autoPlay
-        muted
-        loop
-        playsInline
-        className="w-full h-full absolute object-cover"
-        style={videoStyle}>
-        <source src="/Videos/hero.mp4" type="video/mp4" />
-        {/* <source src="/background-video.webm" type="video/webm" /> */}
-      </video>
-      <div className="relative" >
-        <Navbar />
+      <div className="absolute inset-0 w-full h-full -z-10 pointer-events-none">
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          className="w-full h-full absolute object-cover -z-10 pointer-events-none"
+          style={videoStyle}>
+          <source src="/Videos/hero.mp4" type="video/mp4" />
+          {/* <source src="/background-video.webm" type="video/webm" /> */}
+        </video>
       </div>
-      <div className="w-full h-full flex justify-center items-center 2xl:translate-y-30 md:translate-y-40 translate-y-40">
+      <div className="w-full h-full flex justify-center items-center 2xl:translate-y-45 translate-y-50">
         <div
         className="heroText" 
         style={heroTextStyle} >

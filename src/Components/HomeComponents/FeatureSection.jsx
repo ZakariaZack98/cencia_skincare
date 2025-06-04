@@ -2,7 +2,7 @@ import React from 'react'
 
 const FeatureSection = ({data}) => {
   return (
-    <div className="bg-lightPink text-accentBrwn dark:bg-gray-800 dark:text-accentBrwn lg:mt-[150dvh] mt-[50dvh] lg:py-50 sm:py-25 py-20">
+    <div className="bg-lightPink text-accentBrwn dark:bg-gray-800 dark:text-accentBrwn lg:mt-[150dvh] mt-[40dvh] lg:py-50 sm:py-25 py-20">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 sm:gap-10 gap-y-15 place-items-start">
             {data?.map((item, idx) => {

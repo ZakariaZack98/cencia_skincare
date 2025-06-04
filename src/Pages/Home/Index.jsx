@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import Navbar from "../../Components/HomeComponents/Navbar";
 import VideoBackground from "../../Components/VideoBG";
 import { getFeatureData, getProductData, getShowCaseData, getSingleFeatureData } from "../../lib/fetch";
 import SingleFeature from "../../Components/CommonComponents/SingleFeature";
@@ -28,6 +29,7 @@ const Home = () => {
   
   return (
     <div className="overflow-x-hidden">
+      <Navbar />
       <VideoBackground />
       <FeatureSection data={featureData}/>
       <SingleFeature data={singleFeatureData[0]}/>

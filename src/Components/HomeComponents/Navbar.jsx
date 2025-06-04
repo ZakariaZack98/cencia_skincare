@@ -10,7 +10,7 @@ const Navbar = ({exception}) => {
 
   return (
     <div className={`h-15 backdrop-blur-xl ${exception ? 'bg-accentBrwn' : ''} shadow-md text-lightPink`} style={exception ? {} :{backgroundColor: "rgba(0, 0, 0, 0.136)"}}>
-      <div className="container md:w-9/10 mx-auto h-full">
+      <div className="lg:container w-9/10 mx-auto h-full">
         <div className="flex justify-between items-center h-full">
           <h3 className="font-bodoni sm:text-3xl text-xl font-bold drop-shadow-md cursor-pointer mt-2 sm:translate-x-0 translate-x-3" onClick={() => navigate('/')}>C'ENCIA</h3>
           <div className="pages flex md:gap-x-3 gap-x-1 font-dmSans font-semibold drop-shadow-md items-center md:text-xl text-sm">

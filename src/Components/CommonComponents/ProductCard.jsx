@@ -18,7 +18,7 @@ const ProductCard = ({
 
   return (
     <div
-      className="p-5 rounded-xl bg-white dark:bg-gray-700 dark:text-lightPink font-dmSans mx-auto shadow-xl cursor-pointer"
+      className="min-w-62 p-5 rounded-xl bg-white dark:bg-gray-700 dark:text-lightPink font-dmSans shadow-xl cursor-pointer"
       onClick={(e) => {
         e.stopPropagation();
         navigate(pageLink);

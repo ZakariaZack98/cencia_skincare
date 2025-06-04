@@ -21,7 +21,7 @@ const CartItemCard = ({pid, imgUrl, name, price, qty, subtotal}) => {
   }
 
   return (
-    <div className='flex items-center w-full py-4'>
+    <div className='flex items-center w-full py-4 md:text-base text-xs'>
       <div className="w-[50%] flex items-center gap-x-2">
         <picture>
           <img src={imgUrl} className='w-10 h-10 object-cover object-center'/>
@@ -29,16 +29,16 @@ const CartItemCard = ({pid, imgUrl, name, price, qty, subtotal}) => {
         <p>{name}</p>
       </div>
       <div className="w-[10%]"><p className='text-end'>{price}$</p></div>
-      <div className="w-[20%] text-center">
-        <select name="qty" id="qty" className='px-4 py-1 border-2 border-black' value={qty} onChange={(e) => handleQtyChange(e, pid)}>
+      <div className="w-[20%] text-center sm:ms-0 ms-2">
+        <select name="qty" id="qty" className='sm:px-4 px-1 py-1 border-2 border-black' value={qty} onChange={(e) => handleQtyChange(e, pid)}>
           {[1, 2, 3, 4, 5].map(qty => {
             return <option key={qty} value={qty}>{qty}</option>
           })}
         </select>
       </div>
-      <div className="w-[20%] flex justify-end items-center text-end gap-x-10">
+      <div className="w-[20%] flex justify-end items-center text-end sm:gap-x-10 gap-2">
         <p>{subtotal}$</p>
-        <span className='me-2 text-3xl text-gray-500 cursor-pointer' onClick={() => removeCartItem(pid)}>
+        <span className='sm:me-2 me-0 sm:text-3xl text-base text-gray-500 cursor-pointer' onClick={() => removeCartItem(pid)}>
           <RxCrossCircled/>
         </span>
       </div>

@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 const BlogCard = ({ id, imgUrl, title, auther, date, summery }) => {
   const navigate = useNavigate();
   return (
-    <div className="max-w-sm bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-700 dark:border-gray-700 flex flex-col justify-between">
+    <div className="max-w-sm bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-700 dark:border-gray-700 flex flex-col justify-between mx-auto">
       <a href="#">
         <img
           className="rounded-t-lg h-70 w-full object-cover object-center"
@@ -12,9 +12,9 @@ const BlogCard = ({ id, imgUrl, title, auther, date, summery }) => {
           alt=""
         />
       </a>
-      <div className="p-5 flex flex-col flex-grow">
+      <div className="lg:p-5 p-3 flex flex-col flex-grow">
         <a href="#">
-          <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white font-playfair">
+          <h5 className="mb-2 lg:text-2xl lg:leading-6 text-lg leading-5 font-bold tracking-tight text-gray-900 dark:text-white font-playfair">
             {title}
           </h5>
         </a>

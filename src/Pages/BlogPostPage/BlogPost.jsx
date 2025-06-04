@@ -27,9 +27,9 @@ const BlogPost = () => {
         <div className="h1 font-agraham text-[40px] text-center text-black dark:text-lightPink">The beauty lookbook Blog</div>
         <h3 className="font-bodoni text-4xl text-accentBrwn text-center">by C'ENCIA™</h3>
       </div>
-      <div className="w-full flex posts-stretch gap-x-10">
-        <Postbody matchedPostData={matchedBlogPost} imagesCollection={imagesCollection} textCollections={textCollections}/>
-        <Sidebar sidebarData={sideBarBlogData}/>
+      <div className="lg:px-5 px-0 w-full mx-auto flex sm:flex-row flex-col posts-stretch lg:gap-x-10 gap-x-6">
+        <div className="md:w-7/10 sm:w-6/10 w-full px-3 sm:px-0"><Postbody matchedPostData={matchedBlogPost} imagesCollection={imagesCollection} textCollections={textCollections}/></div>
+        <div className="md:w-3/10 sm:w-4/10 w-full"><Sidebar sidebarData={sideBarBlogData}/></div>
       </div>
     </div>
     </div>

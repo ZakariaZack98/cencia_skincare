@@ -3,7 +3,7 @@ import React from "react";
 
 const Postbody = ({matchedPostData, textCollections, imagesCollection}) => {
   return (
-    <div className="postBody w-[70%] dark:text-lightPink">
+    <div className="postBody dark:text-lightPink">
       <div className="tags flex justify-center gap-5 font-dmSans font-light text-accentBrwn">
         {
           matchedPostData?.tags?.map((tag, idx) => (

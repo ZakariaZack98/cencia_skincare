@@ -17,21 +17,21 @@ const InstructionSlide = ({
   const navigate = useNavigate();
   const { cart, setCart } = useContext(CartContext);
   return (
-    <div className="w-full flex items-center  bg-white dark:bg-gray-700 dark:text-lightPink p-10 text-accentBrwn">
-      <picture className="sm:w-[40%] w-1/4 lg:translate-x-15 translate-x-0">
-        <img src={imgUrl} alt="" className="lg:h-[70dvh] md:scale-100 scale-150 sm:h-[20dvh] h-[14dvh] w-full object-contain" />
+    <div className="w-full flex flex-col md:flex-row items-center bg-white dark:bg-gray-700 dark:text-lightPink p-4 md:p-10 text-accentBrwn gap-6 md:gap-0">
+      <picture className="w-full md:w-2/5 flex-shrink-0 flex justify-center mb-4 md:mb-0 md:mr-8">
+        <img src={imgUrl} alt="" className="h-[30vh] md:h-[40vh] lg:h-[60vh] w-auto max-w-full object-contain" />
       </picture>
-      <div className="textPart sm:w-[60%] w-3/4 flex flex-col sm:gap-y-5 gap-y-1.5 xl:translate-x-0 translate-x-5">
-        <h2 className="title font-bodoni xl:text-[40px] sm:text-xl text-base md:w-1/2 w-full">{title}</h2>
-        <p className="lg:text-2xl sm:text-sm text-xs font-playfair sm:leading-6 leading-3 sm:max-w-[90%] max-w-full">
+      <div className="textPart w-full md:w-3/5 flex flex-col pb-5 md:gap-y-5 xl:translate-x-0 translate-x-0">
+        <h2 className="title font-bodoni text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-[40px] w-full mb-2 md:mb-4">{title}</h2>
+        <p className="font-playfair text-xs sm:text-sm md:text-base lg:text-lg xl:text-2xl leading-4 sm:leading-6 max-w-full mb-2 md:mb-4">
           {textContent}
         </p>
-        <div className="w-50">
+        <div className="w-full max-w-[350px]">
           {onProductPage ? (
             <div>
-              <div className="flex gap-x-4 mb-2">
-                <strike className="text-2xl font-dmSans font-black text-red-500">{retailPrice}$</strike>
-                <span className="text-4xl font-dmSans font-black text-green-500">{preferredPrice}$</span>
+              <div className="flex gap-x-2 md:gap-x-4 mb-2">
+                <strike className="text-base sm:text-xl font-dmSans font-black text-red-500">{retailPrice}$</strike>
+                <span className="text-lg sm:text-2xl md:text-4xl font-dmSans font-black text-green-500">{preferredPrice}$</span>
               </div>
               <div className="flex gap-x-2">
                 <Button

@@ -5,7 +5,7 @@ import { FaCcVisa, FaCcMastercard, FaCcPaypal } from "react-icons/fa";
 const Footer = () => {
   return (
     <div className="bg-accentBrwn text-white py-10">
-      <div className="container mx-auto px-4">
+      <div className="2xl:container w-[85%] mx-auto px-4">
         {/* Social Icons */}
         <div className="flex flex-col sm:flex-row justify-between items-center mb-5">
           <h3 className="font-bodoni text-3xl sm:text-4xl font-bold mb-4 sm:mb-0">

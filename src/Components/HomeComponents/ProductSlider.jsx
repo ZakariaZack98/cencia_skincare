@@ -84,21 +84,21 @@ const ProductSlider = ({ data }) => {
     nextArrow: <CustomNextArrow />,
     responsive: [
       {
-        breakpoint: 1024,
+        breakpoint: 1280,
         settings: {
           slidesToShow: 3,
           slidesToScroll: 1,
         }
       },
       {
-        breakpoint: 768,
+        breakpoint: 1024,
         settings: {
           slidesToShow: 2,
           slidesToScroll: 1,
         }
       },
       {
-        breakpoint: 480,
+        breakpoint: 640,
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
@@ -107,15 +107,15 @@ const ProductSlider = ({ data }) => {
     ]
   };
   return (
-    <div className="bg-lightPink dark:bg-gray-800 w-full md:py-25 py-10">
-      <h1 className="font-dmSans font-black xl:text-[80px] md:text-[50px] text-[20px] md:mb-20 mb-6 text-accentBrwn text-center opacity-50">
+    <div className="bg-lightPink dark:bg-gray-800 w-full md:py-16 py-8">
+      <h1 className="font-dmSans font-black xl:text-[60px] md:text-[40px] text-[22px] md:mb-12 mb-4 text-accentBrwn text-center opacity-50">
         Complete your C'ENCIA Routine
       </h1>
-      <div className="w-[95%] mx-auto slider-container">
+      <div className="w-[98%] sm:w-[95%] mx-auto slider-container">
         <Slider {...settings}>
           {data?.map((item) => {
             return (
-              <div className="px-2"> {/* Add padding around each slide */}
+              <div className="px-1 sm:px-2 md:px-3">
                 <ProductCard
                   key={item.pid}
                   pid={item.pid}

@@ -20,31 +20,35 @@ const ProductPage = () => {
   useEffect(() => {
     window.scrollTo({
       top: 0,
-      behavior: "smooth", 
+      behavior: "smooth",
     });
     AOS.init({
       duration: 300,
       once: false,
     });
-    AOS.refresh();
+    setTimeout(() => {
+      AOS.refresh();
+    }, 100);
   }, [path]);
 
   return (
-    <>
-      <InstructionSlide
-        pid={matchedProduct.pid}
-        imgUrl={slideData.imgUrl}
-        title={slideData.title}
-        textContent={slideData.textContent}
-        onProductPage={true}
-        retailPrice={matchedProduct.retailPrice}
-        preferredPrice={matchedProduct.preferredPrice}
-      />
-      <Ingredients data={productIngredientData} />
-      <InfoBanner data={productPageData.mainBenifits} />
-      <InfoBanner data={productPageData.howToUse} howTo={true} />
-      <ProductSlider data={productData} />
-    </>
+    <div className="bg-lightPink dark:bg-gray-800 min-h-screen ">
+      <div className="w-full">
+        <InstructionSlide
+          pid={matchedProduct.pid}
+          imgUrl={slideData.imgUrl}
+          title={slideData.title}
+          textContent={slideData.textContent}
+          onProductPage={true}
+          retailPrice={matchedProduct.retailPrice}
+          preferredPrice={matchedProduct.preferredPrice}
+        />
+        <Ingredients data={productIngredientData} />
+        <InfoBanner data={productPageData.mainBenifits} />
+        <InfoBanner data={productPageData.howToUse} howTo={true} />
+        <div className="2xl:w-3/4 w-9/10 mx-auto"><ProductSlider data={productData} /></div>
+      </div>
+    </div>
   );
 };
 

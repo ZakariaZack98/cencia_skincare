@@ -82,25 +82,52 @@ const ProductSlider = ({ data }) => {
     slidesToScroll: 1,
     prevArrow: <CustomPrevArrow />,
     nextArrow: <CustomNextArrow />,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 1,
+        }
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        }
+      }
+    ]
   };
   return (
-    <div className="bg-lightPink dark:bg-gray-800 w-full py-25">
-      <h1 className="font-dmSans font-black text-[80px] mb-20 text-accentBrwn text-center opacity-50">Complete your C'ENCIA Routine</h1>
-      <div className="w-[95%] mx-auto">
+    <div className="bg-lightPink dark:bg-gray-800 w-full md:py-25 py-10">
+      <h1 className="font-dmSans font-black xl:text-[80px] md:text-[50px] text-[20px] md:mb-20 mb-6 text-accentBrwn text-center opacity-50">
+        Complete your C'ENCIA Routine
+      </h1>
+      <div className="w-[95%] mx-auto slider-container">
         <Slider {...settings}>
           {data?.map((item) => {
             return (
-              <ProductCard
-                key={item.pid}
-                pid={item.pid}
-                imgUrl={item.imgUrl}
-                name={item.name}
-                preferredPrice={item.preferredPrice}
-                retailPrice={item.retailPrice}
-                buyHandler={item.buyHandler}
-                cartHandler={item.cartHandler}
-                pageLink={item.pageLink}
-              />
+              <div className="px-2"> {/* Add padding around each slide */}
+                <ProductCard
+                  key={item.pid}
+                  pid={item.pid}
+                  imgUrl={item.imgUrl}
+                  name={item.name}
+                  preferredPrice={item.preferredPrice}
+                  retailPrice={item.retailPrice}
+                  buyHandler={item.buyHandler}
+                  cartHandler={item.cartHandler}
+                  pageLink={item.pageLink}
+                />
+              </div>
             );
           })}
         </Slider>

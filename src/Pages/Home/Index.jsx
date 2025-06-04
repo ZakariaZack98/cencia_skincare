@@ -27,7 +27,7 @@ const Home = () => {
     }, []);
   
   return (
-    <>
+    <div className="overflow-x-hidden">
       <VideoBackground />
       <FeatureSection data={featureData}/>
       <SingleFeature data={singleFeatureData[0]}/>
@@ -41,7 +41,7 @@ const Home = () => {
       <SingleFeature data={singleFeatureData[1]} reverse="true"/>
       <NewsLetter/>
       <Footer/>
-    </>
+    </div>
   );
 };
 

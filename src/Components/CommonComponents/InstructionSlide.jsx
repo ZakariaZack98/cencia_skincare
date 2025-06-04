@@ -9,12 +9,12 @@ const InstructionSlide = ({pid, pageLink, imgUrl, title, textContent, onProductP
   const { cart, setCart } = useContext(CartContext);
   return (
     <div className="w-full flex items-center  bg-white dark:bg-gray-700 dark:text-lightPink p-10 text-accentBrwn">
-      <picture className="w-[40%] translate-x-15">
-        <img src={imgUrl} alt="" className="h-[70dvh]" />
+      <picture className="sm:w-[40%] w-1/4 lg:translate-x-15 translate-x-0">
+        <img src={imgUrl} alt="" className="lg:h-[70dvh] sm:h-[20dvh] h-[14dvh] sm:scale-100 scale-140 sm:w-full " />
       </picture>
-      <div className="textPart w-[60%] flex flex-col gap-y-5 ">
-        <h2 className="title font-bodoni text-[40px] w-1/2">{title}</h2>
-        <p className="text-2xl font-playfair leading-6 max-w-[90%]">{textContent}</p>
+      <div className="textPart sm:w-[60%] w-3/4 flex flex-col sm:gap-y-5 gap-y-1.5 xl:translate-x-0 translate-x-5">
+        <h2 className="title font-bodoni xl:text-[40px] sm:text-xl text-base md:w-1/2 w-full">{title}</h2>
+        <p className="lg:text-2xl sm:text-sm text-xs font-playfair sm:leading-6 leading-3 sm:max-w-[90%] max-w-full">{textContent}</p>
         <div className="w-50">
           {onProductPage ? (
             <div>

@@ -47,18 +47,47 @@
   background: linear-gradient(43deg, rgba(119,53,39,1) 42%, rgba(0,0,0,1) 100%); 
 }
 
+/* Base styles for dots */
 .slick-slider .slick-dots {
-  transform: translateY(-40px)
+  transform: translateY(-40px);
 }
 
-/* Ensure higher specificity for the dots */
-.slick-slider .slick-dots li button:before {
-  font-size: 16px; /* Increase dot size */
-  color: #2d2d2d !important; /* Default gray-800 color */
+/* Slider arrow positioning */
+.slick-prev {
+  left: 0;
+  z-index: 1;
 }
 
+.slick-next {
+  right: 0;
+  z-index: 1;
+}
+
+/* Responsive arrow positioning for medium to small devices */
+@media (max-width: 968px) {
+  .slick-prev {
+    left: -10px !important;
+  }
+  
+  .slick-next {
+    right: -10px !important;
+  }
+}
+
+/* Mobile styles with increased specificity and !important */
+@media (max-width: 768px) {
+  .slick-slider .slick-dots {
+    transform: translateY(-30px);
+  }
+  
+  .slick-slider .slick-dots li button:before {
+    font-size: 8px !important; /* Force smaller dots for mobile */
+  }
+}
+
+/* Active dot styles */
 .slick-slider .slick-dots li.slick-active button:before {
-  color: var(--accentBrwn) !important; /* Change to accentBrwn when active */
+  color: var(--accentBrwn) !important;
 }
 
 .cart {

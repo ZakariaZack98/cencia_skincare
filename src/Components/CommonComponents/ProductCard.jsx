@@ -18,7 +18,7 @@ const ProductCard = ({
 
   return (
     <div
-      className="w-[21dvw] p-5 rounded-xl bg-white dark:bg-gray-700 dark:text-lightPink font-dmSans mx-auto shadow-xl cursor-pointer"
+      className="p-5 rounded-xl bg-white dark:bg-gray-700 dark:text-lightPink font-dmSans mx-auto shadow-xl cursor-pointer"
       onClick={(e) => {
         e.stopPropagation();
         navigate(pageLink);
@@ -31,7 +31,7 @@ const ProductCard = ({
         />
       </picture>
       <div className="textSec mt-1">
-        <h3 className="text-2xl font-semibold max-h-25px">{name}</h3>
+        <h3 className="2xl:text-2xl text-xl truncate text-nowrap font-semibold max-h-25px">{name}</h3>
         <p>
           Retail: <strike>{retailPrice}$</strike>
         </p>
